@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = NavigationServiceMAUI
+build_property.ProjectDir = C:\Users\pipi2\OneDrive\Escritorio\Taller_Tecnologias\NavigationServiceMAUI\NavigationServiceMAUI\
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/AppLaunchPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.AppLaunchPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AppLaunchPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AppLaunchPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/FavMovieDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.FavMovieDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FavMovieDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FavMovieDetailPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/FavMovieListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.FavMovieListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FavMovieListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FavMovieListPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/FavouriteListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.FavouriteListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FavouriteListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FavouriteListPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/MovieDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.MovieDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MovieDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MovieDetailPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/MovieListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.MovieListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MovieListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MovieListPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/StudentDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.StudentDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\StudentDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\StudentDetailPage.xaml
+
+[C:/Users/pipi2/OneDrive/Escritorio/Taller_Tecnologias/NavigationServiceMAUI/NavigationServiceMAUI/Views/StudentListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NavigationServiceMAUI.Views.StudentListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\StudentListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\StudentListPage.xaml

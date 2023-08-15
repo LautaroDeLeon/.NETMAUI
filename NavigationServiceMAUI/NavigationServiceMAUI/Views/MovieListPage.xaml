@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewModels="clr-namespace:NavigationServiceMAUI.ViewModels"
+               xmlns:models="clr-namespace:NavigationServiceMAUI.Models"
+              x:DataType="viewModels:MovieListPageViewModel"
+             x:Class="NavigationServiceMAUI.Views.MovieListPage"
+             Title="Wave.TV">
+
+
+
+    <Grid>
+
+
+        <ScrollView  BackgroundColor="#212121" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+            <VerticalStackLayout>
+                <Grid Padding="20,20,20,0">
+                       <RoundRectangle CornerRadius="25"
+                                Fill="#1C2833"
+                                HeightRequest="45">
+                           
+                    
+                </RoundRectangle>
+                <SearchBar x:Name="InnerSearch"
+                       FontSize="Medium"   
+                       HeightRequest="30"
+                       PlaceholderColor="#B3B6B7"
+                       TextColor="White"                    
+                       SearchCommand="{Binding SearchCommand}"
+                       Placeholder="Buscar peliculas..."
+                       WidthRequest="350"
+                       Margin="0,0,0,0"                       
+                       SearchCommandParameter="{Binding Source={x:Reference InnerSearch}, Path=Text}" TextChanged="InnerSearch_TextChanged"/>
+                    
+                </Grid>
+             
+
+                <Label x:Name="Buscador" Text="Tendencias" Padding="10,20,20,10" TextColor="White" FontSize="20"></Label>
+
+                <CollectionView ItemsSource="{Binding MovieList}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal"/>
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:MovieModel" >
+                            <Grid>
+                                <StackLayout>
+                                    <Image 
+                                      Source="{Binding PosterPath}" 
+                                      Aspect="AspectFill"
+                                        HeightRequest="200"/>
+                                </StackLayout>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                    Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:MovieListPageViewModel}}, Path=MovieSelectedCommand}" 
+                                    CommandParameter="{Binding .}"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Label  Text="Mas votadas" Padding="10,20,20,10" TextColor="White" FontSize="20"></Label>
+
+                <CollectionView ItemsSource="{Binding TopRated}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal"/>
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:MovieModel" >
+                            <Grid>
+                                <StackLayout>
+                                    <Image 
+                                      Source="{Binding PosterPath}" 
+                                      Aspect="AspectFill"
+                                        HeightRequest="200"/>
+                                </StackLayout>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                    Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:MovieListPageViewModel}}, Path=MovieSelectedCommand}" 
+                                    CommandParameter="{Binding .}"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Label  Text="Proximamente..." Padding="10,20,20,10" TextColor="White" FontSize="20"></Label>
+
+                <CollectionView ItemsSource="{Binding Upcoming}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal"/>
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:MovieModel" >
+                            <Grid>
+                                <StackLayout>
+                                    <Image 
+                                      Source="{Binding PosterPath}" 
+                                      Aspect="AspectFill"
+                                        HeightRequest="200"/>
+                                </StackLayout>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                    Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:MovieListPageViewModel}}, Path=MovieSelectedCommand}" 
+                                    CommandParameter="{Binding .}"/>
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+
+            </VerticalStackLayout>
+
+
+        </ScrollView>
+    </Grid>
+
+
+
+</ContentPage>

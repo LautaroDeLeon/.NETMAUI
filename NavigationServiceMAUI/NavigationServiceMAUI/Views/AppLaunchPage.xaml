@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:NavigationServiceMAUI.ViewModels"
+             x:Class="NavigationServiceMAUI.Views.AppLaunchPage"
+             x:DataType="viewModels:AppLaunchPageViewModel"
+             Title="Taller tecnologia">
+    <VerticalStackLayout>
+        <Label FontSize="Title" Text="WAVE.TV" HorizontalOptions="Center" Padding="0,20,0,0"/>
+        <Label FontSize="Subtitle" Text="Powered by LauSan Studios" HorizontalOptions="Center" Margin="0,10" Padding="0,0,0,50"/>
+
+        <Button HorizontalOptions="Center" Text="ACTORES" Command="{Binding NavigateToStudentListCommand}"/>
+        
+        <Button HorizontalOptions="Center" Text="PELICULAS" Command="{Binding NavigateToMovieListCommand}"/>
+
+        <Button HorizontalOptions="Center" Text="FAVORITOS" Command="{Binding NavigateToFavouriteMovieListCommand}"/>
+
+    </VerticalStackLayout>
+</ContentPage>

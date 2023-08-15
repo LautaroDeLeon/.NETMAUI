@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:NavigationServiceMAUI.ViewModels"
+             xmlns:models="clr-namespace:NavigationServiceMAUI.Models"
+             x:DataType="viewModels:StudentListPageViewModel"
+             x:Class="NavigationServiceMAUI.Views.StudentListPage"
+             Title="Wave.TV">
+    <ScrollView BackgroundColor="#212121" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        <VerticalStackLayout>
+            <Grid Padding="20,20,20,0">
+                <RoundRectangle CornerRadius="25"
+                                Fill="#1C2833"
+                                HeightRequest="45">
+
+
+                </RoundRectangle>
+                <SearchBar x:Name="InnerSearch"
+                       FontSize="Medium"   
+                       HeightRequest="30"
+                       PlaceholderColor="#B3B6B7"
+                       TextColor="White"                    
+                       SearchCommand="{Binding SearchCommand}"
+                       Placeholder="Buscar actores..."
+                       WidthRequest="350"
+                       Margin="0,0,0,0"                       
+                       SearchCommandParameter="{Binding Source={x:Reference InnerSearch}, Path=Text}" TextChanged="InnerSearch_TextChanged"/>
+
+            </Grid>
+
+            <CollectionView ItemsSource="{Binding StudentList}" Margin="20,20,20,20">
+                <CollectionView.ItemTemplate >
+                    <DataTemplate x:DataType="models:infoActor">
+                        <Frame Margin="0,5, 0,5" BackgroundColor="#212121" BorderColor="White">
+                            <HorizontalStackLayout>
+                                
+                                <Image Source="{Binding ProfilePath}"  HeightRequest="100"/>
+                                <VerticalStackLayout>
+                                    
+                                    <Label Text="{Binding Name}" TextColor="White" FontSize="Small" Padding="30,0,20,5"/>
+                                    <Label Text="{Binding PlaceOfBirth}" TextColor="White" FontSize="Small" Padding="30,0,0,0"/>
+                                    
+                                </VerticalStackLayout>
+                                
+                                
+                                
+                            </HorizontalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:StudentListPageViewModel}}, Path=StudentSelectedCommand}" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewModels="clr-namespace:NavigationServiceMAUI.ViewModels"
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:NavigationServiceMAUI.Models"
+             mc:Ignorable="d"
+             x:Class="NavigationServiceMAUI.Views.MovieDetailPage"
+             x:DataType="viewModels:MovieDetailPageViewModel"
+             Title="{Binding MovieDetail.Title}">
+    
+    <ScrollView BackgroundColor="#212121" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Margin="0,-21,0,0">
+            <!-- Main banner-->
+
+            <!--Banner-->
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="{Binding MovieDetail.PosterPath}" Aspect="AspectFill" HeightRequest="420"/>
+           
+            <!--Movie name-->
+            <Label Grid.Row="0" Grid.Column="0" VerticalOptions="End" TextColor="White" Padding="20,0,0,5" FontSize="20" Text=""/>
+                     
+            <!--Movie Title-->
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding MovieDetail.Title}"  FontSize="20" FontAttributes="Bold" TextColor="White" Padding="20,20,20,5"/>
+            <!--Fecha-->
+            <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding MovieDetail.ReleaseDate, StringFormat='{0:yyyy}'}"  FontSize="15" FontAttributes="Bold" TextColor="#adadad" Padding="20,0,20,10"/>
+            
+            <!--Actor description-->
+            
+            
+            <!--Description-->
+            <Label Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand" Padding="20,0,20,0" TextColor="#adadad" Text="{Binding MovieDetail.Overview}"/>
+            <!--Born information-->
+            <Button x:Name="botoncito" Grid.Row="4" Grid.Column="1" BackgroundColor="#263032" Margin="0,15,20,20" TextColor="#eba507" FontAttributes="Bold" CornerRadius="10" Text="Agregar a favoritos" Clicked="Button_Clicked"                             
+              
+                />
+            <!-- Dividing line-->
+            <BoxView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,20" HeightRequest="1" Color="#263032" HorizontalOptions="FillAndExpand"/>
+
+
+            <WebView Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,20" x:Name="webView" HeightRequest="240" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+            <BoxView Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,20,20,20" HeightRequest="1" Color="#263032" HorizontalOptions="FillAndExpand"/>
+
+            <Label Grid.Row="8" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand" Padding="25,0,20,20" TextColor="White" FontSize="20" Text="Imagenes"/>
+            
+            
+            <CollectionView ItemsSource="{Binding MovieImagesList}"
+                            Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"
+                                HorizontalScrollBarVisibility="Never" 
+                                Margin="20,0,20,15"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                               >
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="25" Orientation="Horizontal"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ImageModel" >
+                        <Grid WidthRequest="200" HeightRequest="320">
+                            <StackLayout>
+                                <Image 
+                                      Source="{Binding FilePath}" 
+                                      Aspect="Fill" />
+                            </StackLayout>
+                           
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </Grid>
+    </ScrollView>
+
+
+</ContentPage>

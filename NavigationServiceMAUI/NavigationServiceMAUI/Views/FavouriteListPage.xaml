@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:NavigationServiceMAUI.ViewModels"
+             xmlns:models="clr-namespace:NavigationServiceMAUI.Models"
+             x:DataType="viewModels:FavouriteListPageViewModel"
+             x:Class="NavigationServiceMAUI.Views.FavouriteListPage"
+             Title="Favoritos">
+
+
+    <ScrollView BackgroundColor="#212121" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never" >
+        <VerticalStackLayout >
+            <CollectionView ItemsSource="{Binding Source= {x:RelativeSource AncestorType= {x:Type viewModels:MovieDetailPageViewModel}}, Path= GetMovieFav}" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:MovieModel">
+                        <Frame Margin="0,5, 0,5">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Title}"/>
+                                <Image Source="{Binding PosterPath}" WidthRequest="60" HeightRequest="60"/>
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:MovieListPageViewModel}}, Path=MovieSelectedCommand}" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

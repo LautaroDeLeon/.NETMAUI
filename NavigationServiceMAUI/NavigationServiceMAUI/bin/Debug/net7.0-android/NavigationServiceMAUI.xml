@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NavigationServiceMAUI</name>
+    </assembly>
+    <members>
+        <member name="T:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.navigateToStudentListCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToStudentListCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToStudentListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToStudentList"/>.</summary>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.navigateToMovieListCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToMovieListCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToMovieListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToMovieList"/>.</summary>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.navigateToFavouriteMovieListCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToFavouriteMovieListCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToFavouriteMovieListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.AppLaunchPageViewModel.NavigateToFavouriteMovieList"/>.</summary>
+        </member>
+        <member name="T:NavigationServiceMAUI.ViewModels.FavouriteMovieDetailPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.FavouriteMovieDetailPageViewModel.MovieDetail">
+            <inheritdoc cref="F:NavigationServiceMAUI.ViewModels.FavouriteMovieDetailPageViewModel._movieDetail"/>
+        </member>
+        <member name="T:NavigationServiceMAUI.ViewModels.FavouriteMovieListPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.FavouriteMovieListPageViewModel.movieSelectedCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.FavouriteMovieListPageViewModel.MovieSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.FavouriteMovieListPageViewModel.MovieSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.FavouriteMovieListPageViewModel.MovieSelected(NavigationServiceMAUI.Models.MovieModel)"/>.</summary>
+        </member>
+        <member name="T:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel.Peli">
+            <inheritdoc cref="F:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel.peli"/>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel.MovieDetail">
+            <inheritdoc cref="F:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel._movieDetail"/>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel.favoritosCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel.FavoritosCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel.FavoritosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.MovieDetailPageViewModel.Favoritos"/>.</summary>
+        </member>
+        <member name="T:NavigationServiceMAUI.ViewModels.MovieListPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.movieSelectedCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.MovieSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.MovieSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.MovieSelected(NavigationServiceMAUI.Models.MovieModel)"/>.</summary>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.MovieListPageViewModel.Search(System.String)"/>.</summary>
+        </member>
+        <member name="T:NavigationServiceMAUI.ViewModels.StudentDetailPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.StudentDetailPageViewModel.StudentDetail">
+            <inheritdoc cref="F:NavigationServiceMAUI.ViewModels.StudentDetailPageViewModel._studentDetail"/>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.StudentDetailPageViewModel.movieSelectedCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.StudentDetailPageViewModel.MovieSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.StudentDetailPageViewModel.MovieSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.StudentDetailPageViewModel.MovieSelected(NavigationServiceMAUI.Models.MovieCredits)"/>.</summary>
+        </member>
+        <member name="T:NavigationServiceMAUI.ViewModels.StudentListPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.studentSelectedCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.StudentSelectedCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.StudentSelectedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.StudentSelected(NavigationServiceMAUI.Models.StudentModel)"/>.</summary>
+        </member>
+        <member name="F:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:NavigationServiceMAUI.ViewModels.StudentListPageViewModel.Search(System.String)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MovieDetail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MovieDetail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Peli">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Peli" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StudentDetail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StudentDetail" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MovieDetail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MovieDetail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Peli">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Peli" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StudentDetail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StudentDetail" generated properties.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:viewModels="clr-namespace:NavigationServiceMAUI.ViewModels"
+             x:Class="NavigationServiceMAUI.Views.FavMovieDetailPage"
+                 x:DataType="viewModels:FavouriteMovieDetailPageViewModel"
+             Title="FavMovieDetailPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Nombre de la pelicula: " />
+                <Label Text="{Binding MovieDetail.Title}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Fecha de estreno: " />
+                <Label Text="{Binding MovieDetail.ReleaseDate}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Descripcion de la pelicula: " />
+                <Label Text="{Binding MovieDetail.Overview}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <WebView x:Name="trailerView" HeightRequest="300" WidthRequest="600"/>
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

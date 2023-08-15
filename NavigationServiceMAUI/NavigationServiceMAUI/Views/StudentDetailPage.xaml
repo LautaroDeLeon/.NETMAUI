@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewModels="clr-namespace:NavigationServiceMAUI.ViewModels"
+             xmlns:models="clr-namespace:NavigationServiceMAUI.Models"
+             x:Class="NavigationServiceMAUI.Views.StudentDetailPage"
+             x:DataType="viewModels:StudentDetailPageViewModel"
+             Title="{Binding StudentDetail.Name}">
+   
+    <ScrollView BackgroundColor="#212121" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" Margin="0,-21,0,0">
+            <!-- Main banner-->
+
+            <!--Banner-->
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill" HeightRequest="400" Source="{Binding StudentDetail.ProfilePath}" />
+            <!--Actor name-->
+            <Label Grid.Row="0" Grid.Column="0" VerticalOptions="End" TextColor="White" Padding="20,0,0,5" FontSize="28" Text= "{Binding StudentDetail.Name}"/>
+            <!--Actor description-->
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding StudentDetail.PlaceOfBirth}"  FontSize="20" FontAttributes="Bold" TextColor="#adadad" Padding="20,10,20,20"/>
+            <!--More option-->
+            <!--Actor description-->
+            <!--Picture option-->
+            <!--<Image Grid.Row="2" Grid.Column="0" Grid.RowSpan="2"  Source="{Binding StudentDetail.ProfilePath}" Margin="0,0,0,0" WidthRequest="150" HeightRequest="160"/>-->
+            <!--Description-->
+            <Label Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="StartAndExpand" Padding="20,0,20,0" TextColor="#adadad" Text="{Binding StudentDetail.Biography}"/>
+            <!--Born information-->
+            <!--<Button Grid.Row="3" Grid.Column="1" BackgroundColor="#263032" Margin="0,15,20,0" TextColor="White" FontAttributes="Bold" CornerRadius="10" Text="Born: May 17, 1936"/>-->
+            <!-- Dividing line-->
+            <BoxView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,20" HeightRequest="1" Color="#263032" HorizontalOptions="FillAndExpand"/>
+
+
+            <!--Known for-->
+            <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="Conocido por"  FontSize="20" FontAttributes="Bold" TextColor="#adadad" Padding="20,0,20,20"/>
+            
+            <!--<StackLayout  Grid.Row="5" Grid.Column="1" Padding="0,0,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="End">
+                <Label TextColor="#eba507" Text="Ver todo"/>
+            </StackLayout>-->
+
+            <CollectionView ItemsSource="{Binding pelisDelActor}"
+                            Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+                                HorizontalScrollBarVisibility="Never" 
+                                Margin="20,0,20,15"                                                                                          
+                               >
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="25" Orientation="Horizontal"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:MovieCredits" >
+                        <Grid WidthRequest="200" HeightRequest="320">
+                            <StackLayout>
+                                <Image 
+                                      Source="{Binding PosterPath}" 
+                                      Aspect="Fill" />
+                            </StackLayout>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:StudentDetailPageViewModel}}, Path=MovieSelectedCommand}" 
+                                    CommandParameter="{Binding .}"/>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
